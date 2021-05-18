@@ -9,31 +9,21 @@ function App() {
 
   
   const [pokemons, setPokemonList]= useState(defaultPokemon);
-  const [loading, setLoading]: [boolean, (loading: boolean) => void] = useState<boolean>(true);
-  const [error, setError]: [string, (error: string) => void] = useState("");
 
   useEffect(() => {
-    setLoading(true);
     axios.get<PokemonSearchResults>('https://pokeapi.co/api/v2/pokemon?limit='+limit)
       .then(response_01 => {
         response_01.data.results?.map((re) => (
           axios.get<Pokemon>(re.url)
           .then(response_02 => {
             pokemons.push(response_02.data);
-            if(response_02.data.id == limit){
-              pokemons.sort((a, b) => a.id - b.id)
+            if(response_02.data.id === limit){
+              pokemons.sort((a, b) => a.id - b.id);
+              console.log('setPokemonList');
               setPokemonList([...pokemons]);
             }
           })
         ))
-      })
-      .catch(ex => {
-        const error =
-        ex.response.status === 404
-          ? "Resource Not found"
-          : "An unexpected error has occurred";
-        setError(error);
-        setLoading(false);
       });
   }, []);
 
