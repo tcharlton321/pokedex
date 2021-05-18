@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
         {pokemons.map((pokemon) => (
-          <div className="card">
+          <div key={pokemon.id} className="card">
             <h3>{pokemon.name}</h3>
             <img src={pokemon.sprites.front_default} alt='missingImage' width="100" height="100"></img>
           </div>
