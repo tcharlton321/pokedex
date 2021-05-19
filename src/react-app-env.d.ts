@@ -172,4 +172,67 @@ export interface Pokemon {
     slot: number;
     type: AbilityOrFormsEntityOrVersionOrMoveLearnMethodOrVersionGroupOrMoveOrStatOrTypeOrSpecies;
   }
+  export interface pokemon_species {
+    base_happiness: number;
+    capture_rate: number;
+    color: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    egg_groups?: (EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape)[] | null;
+    evolution_chain: EvolutionChain;
+    evolves_from_species: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    flavor_text_entries?: (FlavorTextEntriesEntity)[] | null;
+    form_descriptions?: (null)[] | null;
+    forms_switchable: boolean;
+    gender_rate: number;
+    genera?: (GeneraEntity)[] | null;
+    generation: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    growth_rate: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    habitat: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    has_gender_differences: boolean;
+    hatch_counter: number;
+    id: number;
+    is_baby: boolean;
+    is_legendary: boolean;
+    is_mythical: boolean;
+    name: string;
+    names?: (NamesEntity)[] | null;
+    order: number;
+    pal_park_encounters?: (PalParkEncountersEntity)[] | null;
+    pokedex_numbers?: (PokedexNumbersEntity)[] | null;
+    shape: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    varieties?: (VarietiesEntity)[] | null;
+  }
+  export interface EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape {
+    name: string;
+    url: string;
+  }
+  export interface EvolutionChain {
+    url: string;
+  }
+  export interface FlavorTextEntriesEntity {
+    flavor_text: string;
+    language: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    version: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+  }
+  export interface GeneraEntity {
+    genus: string;
+    language: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+  }
+  export interface NamesEntity {
+    language: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    name: string;
+  }
+  export interface PalParkEncountersEntity {
+    area: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+    base_score: number;
+    rate: number;
+  }
+  export interface PokedexNumbersEntity {
+    entry_number: number;
+    pokedex: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+  }
+  export interface VarietiesEntity {
+    is_default: boolean;
+    pokemon: EggGroupsEntityOrLanguageOrVersionOrAreaOrPokedexOrPokemonOrColorOrEvolvesFromSpeciesOrGenerationOrGrowthRateOrHabitatOrShape;
+  }
+  
   

@@ -16,8 +16,10 @@ body {
 }
 
 div.card {
+  position: relative;
   height: 150px;
   width: 150px;
+  max-width: 150px;
   background-color: #023047;
   text-align: center;
   flex: 1;
@@ -28,4 +30,59 @@ div.card {
   margin: 10px;
 }
 
+.poke-modal-container-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  padding: 5px;
+  display: flex;
+}
+.poke-modal-container-arrow {
+  color: rgb(255, 255, 255);
+}
+[role='tooltip'].my-popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
 
+.poke-modal-container-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup='tooltip'].my-popup-overlay {
+  background: transparent;
+}
+
+.pokeModal_01{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+	align-items: center;
+}
+
+.poke-top{
+  display: flex;
+  flex-direction: row;
+	justify-content: center;
+	align-items: center;
+  align-content: space-around;
+  margin: 10px;
+  flex:1;
+}
+
+.poke-top-left{
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  margin: 10px;
+}
+
+.poke-top-right{
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  margin: 10px;
+}
