@@ -50,15 +50,17 @@ function App() {
                 <div className="poke-top-left">
                   <img 
                     src={pokemon.sprites.front_default} 
-                    alt='missingImage' width="100" height="100">
+                    alt='missingImage' width="130" height="130">
                   </img>
                   <h3>No.{pokemon.id}</h3>
                 </div>
                 <div className="poke-top-right">
                   <h3>{pokemon.name}</h3>
-                  <h3>species text</h3>
-                  <h3>HT {pokemon.height}</h3>
-                  <h3>WT {pokemon.weight}</h3>
+                  <h3>species</h3>
+                  <h3>HT&nbsp;&nbsp;&nbsp;
+                    {Math.round((pokemon.height*10)/30.48)}'
+                    {Math.round(((pokemon.height*10)/2.54)%12)}''</h3>
+                  <h3 style={{textTransform: 'none'}}>WT&nbsp;&nbsp;&nbsp;{pokemon.weight} lb</h3>
                 </div>
               </div>
             </div>
